@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 Google 日曆 - 忙碌狀態</title>
+    
+    <style>
+        /* 1. 基本樣式與置中 */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* 確保內容至少填滿整個視窗高度 */
+            margin: 0;
+            background-color: #f4f4f4;
+            padding: 10px; /* 在小螢幕上保留邊距 */
+            box-sizing: border-box;
+        }
+        
+        /* 2. 日曆容器 - 控制大小與邊界 */
+        .calendar-container {
+            width: 100%; /* 在手機上使用 100% 寬度 */
+            max-width: 95vw; /* 在桌面上限制最大寬度 */
+            height: 95vh; /* 保持高度為視窗高度95 vh */
+            // max-width: 1000px; /* 在桌面上限制最大寬度 */
+            // height: 80vh; /* 保持高度為視窗高度的 80% */
+            min-height: 400px; /* 設定最小高度，確保在手機上足夠大 */
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden; /* 確保 iframe 不會溢出 */
+        }
+        
+        /* 3. 內嵌框架 - 確保填滿容器 */
+        .calendar-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block; /* 移除可能出現的底線或間隙 */
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTaipei&showPrint=0&title=Tony%20%E7%9A%84%E8%A1%8C%E4%BA%8B%E6%9B%86&src=dG9ueTI5NTkwNjMwQGdtYWlsLmNvbQ&src=emgtdHcudGFpd2FuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986cb&color=%23ad1457" 
+            style="border:solid 1px #777" 
+            frameborder="0" 
+            scrolling="no">
+        </iframe>
+    </div>
+</body>
+
+</html>
+
+
